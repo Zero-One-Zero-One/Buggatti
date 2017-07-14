@@ -11,7 +11,7 @@ public class ProductoController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/greeting")
+    @RequestMapping("/producto")
     public Producto greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Producto(counter.incrementAndGet(),
                             String.format(template, name));
